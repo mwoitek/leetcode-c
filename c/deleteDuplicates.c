@@ -9,19 +9,19 @@
 
 struct ListNode* deleteDuplicates(struct ListNode* head)
 {
-    struct ListNode* current = head;
-    struct ListNode* next_next;
+  struct ListNode* current = head;
+  struct ListNode* next_next;
 
-    if (current != NULL) {
-        while (current->next != NULL) {
-            if (current->val == current->next->val) {
-                next_next = current->next->next;
-                free(current->next);
-                current->next = next_next;
-            } else {
-                current = current->next;
-            }
-        }
+  if (current != NULL) {
+    while (current->next != NULL) {
+      if (current->val == current->next->val) {
+        next_next = current->next->next;
+        free(current->next);
+        current->next = next_next;
+      } else {
+        current = current->next;
+      }
     }
-    return head;
+  }
+  return head;
 }

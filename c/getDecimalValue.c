@@ -30,7 +30,7 @@ int getDecimalValue(struct ListNode* head)
 
   numberNodes = countNodes(head);
   for (i = numberNodes - 1; i >= 0; i--) {
-    powerOfTwo = (int) pow(2.0, (double) i);
+    powerOfTwo = (int)pow(2.0, (double)i);
     decimalValue += powerOfTwo * current->val;
     current = current->next;
   }

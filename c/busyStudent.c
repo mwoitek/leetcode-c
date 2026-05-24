@@ -1,4 +1,8 @@
-int busyStudent(int* startTime, int startTimeSize, int* endTime, int endTimeSize, int queryTime)
+int busyStudent(int* startTime,
+                int startTimeSize,
+                int* endTime,
+                int endTimeSize,
+                int queryTime)
 {
   int count = 0, i;
 

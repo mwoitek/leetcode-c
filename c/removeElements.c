@@ -9,24 +9,24 @@
 
 struct ListNode* removeElements(struct ListNode* head, int val)
 {
-    struct ListNode* current = head;
-    struct ListNode* current_next;
-    struct ListNode* previous = NULL;
+  struct ListNode* current = head;
+  struct ListNode* current_next;
+  struct ListNode* previous = NULL;
 
-    while (current != NULL) {
-        current_next = current->next;
-        if (current->val == val) {
-            free(current);
-            if (previous == NULL) {
-                head = current_next;
-                previous = NULL;
-            } else {
-                previous->next = current_next;
-            }
-        } else {
-            previous = current;
-        }
-        current = current_next;
+  while (current != NULL) {
+    current_next = current->next;
+    if (current->val == val) {
+      free(current);
+      if (previous == NULL) {
+        head = current_next;
+        previous = NULL;
+      } else {
+        previous->next = current_next;
+      }
+    } else {
+      previous = current;
     }
-    return head;
+    current = current_next;
+  }
+  return head;
 }
